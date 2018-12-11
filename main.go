@@ -8,8 +8,6 @@ import (
 	"github.com/go-redis/redis"
 )
 
-// https://redis.io/topics/notifications
-
 const key = "config:app"
 
 func main() {
@@ -17,9 +15,7 @@ func main() {
 		Addr: "redis:6379",
 	}))
 
-	for _ = range client.WatchKey(context.TODO(), key) {
+	for _ = range client.KeyW(context.TODO(), key) {
 		fmt.Printf("key %s modified\n", key)
 	}
-
-	fmt.Println("END")
 }

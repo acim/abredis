@@ -1,6 +1,6 @@
 # abredis
 
-[Redis](https://github.com/go-redis/redis) client extensions
+[Redis](https://github.com/go-redis/redis) client extensions to use [Redis notifications](https://redis.io/topics/notifications)
 
 ## Try it out
 
